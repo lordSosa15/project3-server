@@ -115,7 +115,7 @@ router.post("/products/:productID", jwtVerify, adminVerify, (req, res) => {
 // ************************************************
 // POST Route: DELETE THE PRODUCT ROUTE
 // ************************************************
-router.delete("/products/:productID", jwtVerify, adminVerify, (req, res) => {
+router.delete("/products/:productID", jwtVerify, (req, res) => {
   Product.findByIdAndDelete(req.params.productID)
     .then(() =>
       res.status(200).json({ message: "Product deleted successfully" })

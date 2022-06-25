@@ -42,7 +42,7 @@ app.post("/create-checkout-session", createCheckoutSession);
 require("./error-handling")(app);
 // const port = 8080
 
-app.listen(process.env.PORT, () =>
-  console.log("server listening on port", process.env.PORT)
-);
+// app.listen(process.env.PORT, () =>
+//   console.log("server listening on port", process.env.PORT)
+// );
 module.exports = app;
